@@ -1,0 +1,10 @@
+<h1><%= @shelter.name %></h1>
+<p>
+  Address: <%= @shelter.address %><br>
+  City: <%= @shelter.city %><br>
+  State: <%= @shelter.state %><br>
+  Zip: <%= @shelter.zip %>
+  <form action="/shelters" method="get">
+    <button type="submit">Return</button>
+  </form>
+</p>

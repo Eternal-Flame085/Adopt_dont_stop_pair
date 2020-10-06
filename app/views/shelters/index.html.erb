@@ -4,11 +4,11 @@
 <% @shelters.each do |shelter| %>
   <div>
     <p>
-      <b>Name: <%= shelter[:name] %></b><br>
-      Address: <%= shelter[:address] %><br>
-      City: <%= shelter[:city] %>
-      State: <%= shelter[:state] %>
-      Zip: <%= shelter[:zip] %><br>
+      <b><a href="/shelters/<%= shelter.id %>">Name: <%= shelter.name %></a></b><br>
+      Address: <%= shelter.address %><br>
+      City: <%= shelter.city %><br>
+      State: <%= shelter.state %><br>
+      Zip: <%= shelter.zip %>
     </p>
   </div>
 <% end %>
