@@ -52,4 +52,8 @@ class SheltersController < ApplicationController
     @shelter_id = params[:id]
     @pets = Pet.all.where("shelter_id = @shelter_id")
   end
+
+  def pet_show
+    @pet = Pet.find(params[:id])
+  end
 end
