@@ -3,9 +3,11 @@
   <div>
       <img src="<%= pet.image %>">
       <p>
-        <b>Name: <%= pet.name %></b><br>
+        <b><a href="/shelters/<%= @shelter_id %>/pets/<%= pet.id %>">
+          Name: <%= pet.name %>
+        </a></b><br>
         Age: <%= pet.age %><br>
-        Sex: <%= pet.sex %>
+        Sex: <%= pet.sex %><br>
       </p>
   </div>
 <% end %>
