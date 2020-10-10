@@ -1,0 +1,15 @@
+<h1>All pets in system</h1>
+
+<% @pets.each do |pet| %>
+  <div>
+      <img src="<%= pet.image %>" width='256' height='192'>
+      <p>
+        <b><a href="/pets/<%= pet.id %>">
+          Name: <%= pet.name %>
+        </a></b><br>
+        Age: <%= pet.age %><br>
+        Sex: <%= pet.sex %><br>
+        Shelter Name: <%= @shelters.find(pet.shelter_id).name %>
+      </p>
+  </div>
+<% end %>
