@@ -16,6 +16,7 @@
 
   <p>Enter pet sex</p>
   <input type='text' name='pet[sex]'/><br/>
+  <input type="hidden" name="pet[status]" value="Adoptable">
   <input type="hidden" name="pet[shelter_id]" value="<%=params[:shelter_id]%>">
 
   <input type='submit' value="Create Pet"/>
