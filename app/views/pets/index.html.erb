@@ -2,7 +2,7 @@
 
 <% @pets.each do |pet| %>
   <div>
-      <img src="<%= pet.image %>">
+      <img src="<%= pet.image %>" width='256' height='192'>
       <p>
         <b><a href="/pets/<%= pet.id %>">
           Name: <%= pet.name %>

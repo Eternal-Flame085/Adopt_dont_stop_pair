@@ -9,17 +9,11 @@ class PetsController < ApplicationController
     @pet = Pet.find(params[:id])
   end
 
-  def pets_index
-    @shelter = Shelter.find(params[:shelter_id])
-    @shelter_id = params[:shelter_id]
-    @pets = Pet.all.where("shelter_id = #{@shelter_id}")
-  end
-
-  def pet_new
+  def new
 
   end
 
-  def pet_create
+  def create
     pet = Pet.new({
       image: params[:pet][:image],
       name: params[:pet][:name],
