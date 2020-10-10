@@ -3,6 +3,10 @@ class SheltersController < ApplicationController
     @shelters = Shelter.all
   end
 
+  def shelters
+    redirect_to '/shelters'
+  end
+
   def new
 
   end
