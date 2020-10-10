@@ -28,10 +28,27 @@ class PetsController < ApplicationController
       sex: params[:pet][:sex],
       status: params[:pet][:status],
       shelter_id: params[:shelter_id]
-      })
+    })
 
     pet.save
 
     redirect_to "/shelters/#{params[:shelter_id]}/pets"
+  end
+
+  def edit
+    @pet = Pet.find(params[:id])
+  end
+
+  def update
+    pet = Pet.find(params[:id])
+    pet.update(pet_params)
+
+    redirect_to "/pets/#{params[:id]}"
+  end
+
+  private
+
+  def pet_params
+    params.permit(:image, :name, :age, :sex, :description)
   end
 end
