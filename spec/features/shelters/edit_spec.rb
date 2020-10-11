@@ -10,14 +10,10 @@ describe 'As a visitor' do
       expect(page).to have_content("Edit Shelter Info")
 
       fill_in 'shelter[name]', with: "Heaven"
-      fill_in 'shelter[address]', with: "#{shelter_1.address}"
-      fill_in 'shelter[city]', with: "#{shelter_1.city}"
-      fill_in 'shelter[state]', with: "#{shelter_1.state}"
-      fill_in 'shelter[zip]', with: "#{shelter_1.zip}"
 
       click_button 'Submit shelter'
       expect(current_path).to eq('/shelters')
-
+      
       expect(page).to have_content("Heaven")
       expect(page).to have_content("#{shelter_1.address}")
       expect(page).to have_content("#{shelter_1.city}")
